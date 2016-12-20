@@ -54,6 +54,10 @@ RUN apt-get install -y --no-install-recommends \
     psmisc \
     wget
 
+RUN apt-get install -y --no-install-recommends libfuse-dev
+
+RUN apt-get install -y --no-install-recommends gdbserver
+
 # Clean-up downloaded packages.
 RUN apt-get clean && \
     apt-get autoremove
